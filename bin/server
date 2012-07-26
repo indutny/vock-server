@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+// vim:syntax=javascript
+
+var vockServer = require('..');
+
+var server = vockServer.create();
+
+server.listen(43210, '0.0.0.0');
+console.log('Started Vock Server');
