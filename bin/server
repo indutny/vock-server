@@ -5,11 +5,15 @@ var cluster = require('cluster'),
     vockServer = require('..');
 
 if (cluster.isMaster) {
-  for (var i = 0; i < 4; i++) {
+  function fork() {
     cluster.fork().on('exit', function(signal) {
       console.error('worker died: %d', signal);
-      cluster.fork();
+      fork();
     });
+  }
+
+  for (var i = 0; i < 4; i++) {
+    fork();
   }
 } else {
   var server = vockServer.create(),
