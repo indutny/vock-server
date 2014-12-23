@@ -1,7 +1,7 @@
 {
   "name": "vock-server",
   "version": "0.1.0",
-  "private": true,
+  "bin": "bin/server",
   "main": "lib/server",
   "dependencies": {
     "msgpack-js": "~0.1.1",
