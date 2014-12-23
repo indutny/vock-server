@@ -1,6 +1,6 @@
 {
   "name": "vock-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "bin": "bin/server",
   "main": "lib/server",
   "dependencies": {
